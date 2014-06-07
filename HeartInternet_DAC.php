@@ -14,7 +14,7 @@ class DomainCheck{
 	public $AccessToken;
 	public $JSONData;
 	
-	function __contruct($AccessToken){
+	function __construct($AccessToken){
 		$this->AccessToken = base64_encode($AccessToken)
 	}
 	
@@ -29,7 +29,6 @@ class DomainCheck{
 	}
 	
 	function DoCheck(){
-		$this->CreateJSON();
 		$http_headers = array('Authorization: Bearer ' . $this->AccessToken, 'Content-Type: application/json');
 		$ch = curl_init();                    
 		curl_setopt($ch, CURLOPT_URL,'http://api.heartinternet.co.uk/cx/dac.cgi');
