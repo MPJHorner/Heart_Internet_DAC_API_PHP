@@ -15,7 +15,7 @@ class DomainCheck{
 	public $JSONData;
 	
 	function __construct($AccessToken){
-		$this->AccessToken = base64_encode($AccessToken)
+		$this->AccessToken = base64_encode($AccessToken);
 	}
 	
 	function AddData($DomainName, $Extensions, $Premium, $Suggestion, $Incremental){
